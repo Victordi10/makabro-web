@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Makabro Restaurante</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/logoIc.jpeg">
+    <!-- biblioteca para slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- biblio para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <meta name="keywords" content="restaurante, asados, hamburguesas, comida de lujo, colombiana, Makabro, parrilla, gourmet, carne, cortes de carne, parrillada, sabores colombianos, cocina colombiana, experiencia gastronómica, comida deliciosa, platos exquisitos">
+    <meta name="description" content="Disfruta de los mejores asados, hamburguesas gourmet y comida de lujo colombiana en Makabro. Somos tu destino para una experiencia gastronómica única. Nuestro menú incluye una variedad de sabores colombianos, cortes de carne selectos y platos exquisitos para satisfacer tus antojos. Ven y descubre por qué somos el restaurante favorito de los amantes de la buena comida en Colombia.">
+    <meta name="author" content="Victor Manuel Cordoba">
+    <meta name="copyright" content="Bysite pro makabro">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <!-- cambiar las meta en el lanzamiento -->
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="containerCabecera"> -->
+        <header class='header'>
+            <div class="he-container">
+                <div class="he-btnsMenu">
+                    <!-- icono de abrir el menu -->
+                    <i class="fas fa-bars burger boton-header" id="burger"></i>
+                    <!-- icono de cerrar el menu -->
+                    <i class="fas fa-times  boton-header close" id="close"></i>
+                </div>
+                <a href="" class='he-logo'><img src="img/logoM.jpeg" alt="" class='he-logo'></a>
+                <nav class='he-menu'>
+                    <a href='#carta'>Carta</a>
+                    <a href='#sedes'>Sedes</a>
+                    <a href='https://api.whatsapp.com/send?phone=573022628524&text=Hola,%20quiero%20hacer%20una%20reserva%20en%20makabro'>Reservar</a>
+                </nav>
+                <div class='he-infoContac'>
+                    <i class="fas fa-phone i"><span>310 3015179</span></i>
+                    <i class="fas fa-map-marker-alt i"><span>carrera 55 calle 5 #30-20</span></i>
+                </div>
+            </div>
+            <!-- <div class="he-container_phone" id="heContainerPhone"> -->
+                <nav class='he-menu_phone' id="heContainerPhone">
+                    <a href='#carta'>Carta</a>
+                    <a href='#sedes'>Sedes</a>
+                    <a href='https://api.whatsapp.com/send?phone=573022628524&text=Hola,%20quiero%20hacer%20una%20reserva%20en%20makabro'>Reservar</a>
+                </nav>
+            <!-- </div> -->
+        </header>
+        <main>
+          <!-- botones flotantes -->
+          <div class="ma-containerBtnFlo">
+            <a href="https://api.whatsapp.com/send?phone=573022628524&text=Hola,%20quiero%20hacer%20una%20reserva%20en%20makabro" target="_blank">
+                <i class="fab fa-whatsapp botonFwhatsapp"></i>
+            </a>
+        </div>
+          <section class="cover">
+            <div class="cover-content">
+                <h1>Bienvenidos a <strong>Makabro</strong></h1>
+                <div class="cover-buttons">
+                    <a href="https://api.whatsapp.com/send?phone=573022628524&text=Hola,%20quiero%20hacer%20una%20reserva%20en%20makabro"><button class="cover-button">Reservas</button></a>
+                    <a href="#carta"><button class="cover-button">Carta</button></a>
+                    <a href="#sedes"><button class="cover-button">Sedes</button></a>
+                </div>
+            </div>
+            <div class="cover-media">
+                <img src="img/logo.jpeg" alt="Logo de Makabro" class="cover-image">
+                <video src="video/video.mp4" type="video/mp4" autoplay muted loop class="cover-video"></video>
+            </div>
+        </section>
+        
+            <!--  </div> -->
+        <section class="gallery">
+          <div class="gallery-item">
+              <img src="img/img(1).jpeg" alt="foto de comida" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+              <img src="img/img(2).jpeg" alt="foto de comida" class="gallery-image">
+          </div>
+          <div class="gallery-item gI5">
+            <img src="img/img(3).jpeg" alt="foto de comida" class="gallery-image">
+          </div>
+          <div class="gallery-item">
+            <img src="img/img(4).jpeg" alt="foto de comida" class="gallery-image">
+          </div>
+          <div class="gallery-item ">
+            <img src="img/img(5).jpeg" alt="foto de comida" class="gallery-image ">
+          </div>
+      </section>
+            
+      <a href="https://www.instagram.com/makabro.med/" target="_blank" rel="noopener noreferrer" class="enIcon"><i class="fab fa-instagram i"><span>@makabro_med</span></i></a>
+
+
+  <section class="ma-carta" id="carta">
+    <h2>Nuestra carta</h2>
+    <header class="car-header">
+        <span class="car-header_categoria" id="sopas" data-menu="sopas">Recomendados del chef</span>
+        <span class="car-header_categoria" id="bandejas" data-menu="bandejas">Bebidas</span>
+        <span class="car-header_categoria" id="bebidas" data-menu="bebidas">Asados</span>
+        <span class="car-header_categoria" id="postres" data-menu="postres">Burgers</span>
+        <span class="car-header_categoria" id="entradas" data-menu="entradas">Entradas</span>
+    </header>
+    <main class="car-container">
+        <section class="car-container_categoria" id="sopas">
+            <!-- Artículos de sopas -->
+            <article class="car-articulo">
+                <header class="art-header_contenedor">
+                    <p class="art-titulo">Burger</p>
+                    <span class="art-precio">$7000</span>
+                </header>
+                <div class="art-detalles_contenedor">
+                    <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                    <img src="img/img(1).jpeg" alt="" class="art-img" loading="lazy">
+                </div>
+            </article>
+
+            <article class="car-articulo">
+              <header class="art-header_contenedor">
+                    <p class="art-titulo">Burger</p>
+                  <span class="art-precio">$7000</span>
+              </header>
+              <div class="art-detalles_contenedor">
+                  <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                  <img src="img/img(1).jpeg" alt="" class="art-img" loading="lazy">
+              </div>
+          </article>
+          <article class="car-articulo">
+            <header class="art-header_contenedor">
+                    <p class="art-titulo">Burger</p>
+                <span class="art-precio">$7000</span>
+            </header>
+            <div class="art-detalles_contenedor">
+                <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                <img src="img/img(1).jpeg" alt="" class="art-img" loading="lazy">
+            </div>
+        </article>
+        
+            <!-- Agregar más artículos aquí -->
+        </section>
+        <section class="car-container_categoria conNone" id="bandejas">
+          <article class="car-articulo">
+            <header class="art-header_contenedor">
+                    <p class="art-titulo">Burger</p>
+                <span class="art-precio">$7000</span>
+            </header>
+            <div class="art-detalles_contenedor">
+                <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                <img src="img/img(2).jpeg" alt="" class="art-img" loading="lazy">
+            </div>
+        </article>
+        <article class="car-articulo">
+            <header class="art-header_contenedor">
+                    <p class="art-titulo">Burger</p>
+                <span class="art-precio">$7000</span>
+            </header>
+            <div class="art-detalles_contenedor">
+                <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                <img src="img/img(2).jpeg" alt="" class="art-img" loading="lazy">
+            </div>
+        </article>
+        <article class="car-articulo">
+          <header class="art-header_contenedor">
+                    <p class="art-titulo">Burger</p>
+              <span class="art-precio">$7000</span>
+          </header>
+          <div class="art-detalles_contenedor">
+              <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+              <img src="img/img(2).jpeg" alt="" class="art-img" loading="lazy">
+          </div>
+        </article>
+
+        
+            <!-- Artículos de bebidas -->
+            <!-- Agregar más artículos aquí -->
+        </section>
+        <section class="car-container_categoria conNone" id="bebidas">
+          <article class="car-articulo">
+            <header class="art-header_contenedor">
+                <p class="art-titulo">Sopa de pastas</p>
+                <span class="art-precio">$7000</span>
+            </header>
+            <div class="art-detalles_contenedor">
+                <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                <img src="img/img(3).jpeg" alt="" class="art-img" loading="lazy">
+            </div>
+          </article>
+          <article class="car-articulo">
+            <header class="art-header_contenedor">
+                <p class="art-titulo">Sopa de pastas</p>
+                <span class="art-precio">$7000</span>
+            </header>
+            <div class="art-detalles_contenedor">
+                <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                <img src="img/img(3).jpeg" alt="" class="art-img" loading="lazy">
+            </div>
+          </article>
+          <article class="car-articulo">
+            <header class="art-header_contenedor">
+                <p class="art-titulo">Sopa de pastas</p>
+                <span class="art-precio">$7000</span>
+            </header>
+            <div class="art-detalles_contenedor">
+                <p class="art-descripcion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, enim!</p>
+                <img src="img/img(3).jpeg" alt="" class="art-img" loading="lazy">
+            </div>
+          </article>
+          
+
+            <!-- Artículos de asados -->
+            <!-- Agregar más artículos aquí -->
+        </section>
+        <section class="car-container_categoria conNone" id="postres">
+            <!-- Artículos de burgers -->
+            <!-- Agregar más artículos aquí -->
+        </section>
+        <section class="car-container_categoria conNone" id="entradas">
+            <!-- Artículos de entradas -->
+            <!-- Agregar más artículos aquí -->
+        </section>
+      </main>
+    </section>
+
+            <!-- seccion de testimonios -->
+      <section class="ma-testimonios">
+        <h2>¿Qué dicen nuestros clientes?</h2>
+        <div class="testimonio-container">
+            <div class="testimonio">
+                <img src="img/img(1).jpeg" alt="Cliente 1">
+                <h3>Recomendadísimos</h3>
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iusto beatae."</p>
+                <span>-Victor Manuel cordoba</span>
+            </div>
+            <div class="testimonio">
+                <img src="img/img(5).jpeg" alt="Cliente 2">
+                <h3>Lo mejor</h3>
+                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iusto beatae."</p>
+                <span>-Victor Manuel cordoba</span>
+            </div>
+          <div class="testimonio">
+              <img src="img/img(3).jpeg" alt="Cliente 3">
+              <h3>Me encantó</h3>
+              <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iusto beatae iste."</p>
+              <span>-Victor Manuel cordoba</span>
+          </div>
+      </div>
+  </section>
+          
+
+            <!-- seccion de sedes -->
+            <section class="ma-sedes" id="sedes">
+              <h2>Visítanos en nuestras sedes</h2>
+              <div class="sedes-container">
+                <div class="sedes-redes_container">
+                  <div class="info-redes">
+                    <i class="fas fa-envelope i"></i><span>Makabro@gmail.com</span>
+                </div>
+                  <div class="info-redes">
+                    <a href="https://www.instagram.com/makabro.med/" target="_blank" rel="noopener noreferrer" class="enIcon"><i class="fab fa-instagram i"><span>@makabro_med</span></i></a>
+                      
+                  </div>
+                  <div class="info-redes">
+                      <i class="fab fa-facebook i"></i><span>makabro2023</span>
+                  </div>
+
+                  <button class="boton-reservar">Reservar</button>
+              </div>
+              
+                  <!-- Slider main container -->
+                  <div class="swiper">
+                      <!-- Additional required wrapper -->
+                      <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide sede-info sede1">
+                              <h3>Sede Bello</h3>
+                              <div class='he-infoContacSedes'>
+                                <i class="fas fa-phone i"><span>310 3015179</span></i>
+                                <i class="fas fa-map-marker-alt i"><span>carrera 55 calle 5 #30-20</span></i>
+                              </div>
+                              <button class="boton-sedes">Cómo Llegar</button>
+                          </div>
+                          <!-- otro -->
+                          <div class="swiper-slide sede-info sede2">
+                              <h3>Sede La 80</h3>
+                              <div class='he-infoContacSedes'>
+                                <i class="fas fa-phone i sedeI"><span>310 3015179</span></i>
+                                <i class="fas fa-map-marker-alt i sedeI"><span>carrera 55 calle 5 #30-20</span></i>
+                              </div>
+                              <button class="boton-sedes">Cómo Llegar</button>
+                          </div>
+                          <!-- otro -->
+                          <div class="swiper-slide sede-info sede3">
+                              <h3>Sede Campo valdes</h3>
+                              <div class='he-infoContacSedes'>
+                                <i class="fas fa-phone i"><span>310 3015179</span></i>
+                                <i class="fas fa-map-marker-alt i"><span>carrera 55 calle 5 #30-20</span></i>
+                              </div>
+                              <button class="boton-sedes">Cómo Llegar</button>
+                          </div>
+                      </div>
+                      <!-- If we need pagination -->
+                      <div class="swiper-pagination"></div>
+          
+                      <!-- If we need navigation buttons -->
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                  </div>
+              </div>
+          </section>
+          
+          <section class="ma-horarios">
+            <h2>Horarios</h2>
+            <ul class="ho-container">
+                <li>
+                    <span>Lunes a Jueves</span>
+                    <p>De 6:00pm a 10:30pm</p>
+                </li>
+                <li>
+                    <span>Viernes</span>
+                    <p>De 6:00pm a 1:30pm</p>
+                </li>
+                <li>
+                    <span>Sábados</span>
+                    <p>De 6:00pm a 2:30pm</p>
+                </li>
+                <li>
+                    <span>Domingos</span>
+                    <p>De 6:00pm a 11:30pm</p>
+                </li>
+            </ul>
+            <div class='he-infoContacPhone'>
+                <i class="fas fa-phone-alt i"></i><span>310 3015179</span>
+                <i class="fas fa-map-marker-alt i"></i><span>Carrera 55 Calle 5 #30-20</span>
+            </div>
+        </section>
+        
+        </main>
+
+        <footer class="footer">
+          <img src="img/logoIc.jpeg" alt="" class="fo-img">
+          <div class="fo-info_contact">
+              <div class="fo-container">
+                  <h2 class="fo-titulo">Makabro</h2>
+                  <span class="fo-subTitulo">Restaurante</span>
+              </div>
+              <div class="fo-container fc2">
+                  <div class="fo-direc_container">
+                      <span>CL.12#43b 13</span>
+                      <span>Bello, Antioquia</span>
+                  </div>
+                  <button class="fo-boton"><em>Contactanos</em></button>
+                  <span><strong>Abierto:</strong> 7:00 am - 5:00 pm</span>
+              </div>
+              <ul class="fc3">
+                  <a href="https://www.instagram.com/makabro.med/" target="_blank" rel="noopener noreferrer"><li class="fab fa-instagram icon"></li></a>
+                  <li class="fab fa-facebook-f icon"></li>
+                  <a href="https://api.whatsapp.com/send?phone=573022628524&text=Hola,%20quiero%20hacer%20una%20reserva%20en%20makabro" target="_blank" rel="noopener noreferrer"><li class="fab fa-whatsapp icon"></li></a>
+              </ul>
+          </div>
+          <p id="derechos">&copy; 2023 Bysite pro. Todos los derechos reservados.</p>
+      </footer>
+      
+
+    </div>
+    <script src="index.js"></script>
+    <!-- Al final del cuerpo del documento HTML -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // Inicialización del slider de la sección de sedes una vez que el documento esté completamente cargado
+  document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal', // Dirección del swiper
+      loop: true, // Repetir al final del swiper
+      effect: 'coverflow', // Efecto de "carta"
+      coverflowEffect: {
+        rotate: 70, // Ángulo de rotación de las diapositivas
+        stretch: 10, // Espaciado entre las diapositivas
+        depth: 100, // Profundidad de la perspectiva
+        modifier: 1, // Modificador para las sombras
+        slideShadows: true, // Habilitar sombras en las diapositivas
+      },
+      autoplay: {
+        delay: 5000, // Intervalo de tiempo entre diapositivas en milisegundos
+        disableOnInteraction: false, // Permitir la reproducción automática después de la interacción del usuario
+      },
+      pagination: {
+        el: '.swiper-pagination', // Selector del elemento de paginación
+      },
+      navigation: {
+        nextEl: '.swiper-button-next', // Selector del botón de siguiente
+        prevEl: '.swiper-button-prev', // Selector del botón de anterior
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar', // Selector de la barra de desplazamiento
+      },
+    });
+  });
+</script>
+</body>
+</html>

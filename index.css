@@ -1,0 +1,894 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-titulo);
+
+}
+/* ajustes generales para los iconos */
+.i{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--color-tres);
+
+}
+.i span {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: var(--color-dos);
+    font-weight: 100;
+}
+.enIcon{
+    text-decoration: none;
+}
+/* 
+negro: #0D0D0D
+blanco: #F2F2F2
+rojo oscuro: #400101
+fucia: #BF1523
+rojo claro: #D90718
+ */
+:root{
+    --color-fondo:#F2F2F2;
+    --color-uno:#0B0B0B;
+    --color-dos:#FFFFFF;
+    --color-tres:#D90718;
+    --color-cuatro:#400101;
+    --color-transparent:#777;
+    --fuente-titulo:"Medula One", system-ui;
+    --fuente-second:"nunito", sans-serif;
+    --font-size_padre:16px;
+}
+
+body{
+    color: var(--color-dos);
+    height: 100%;
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color:#fff;
+}
+
+/* ajustes de la cabecera */
+/* .containerCabecera{
+} */
+.header{
+    font-size: 16px;
+    z-index: 500;
+    position: sticky;
+    top: 0;
+    background:var(--color-uno);
+    color: var(--color-dos);
+    width: 100%;
+}
+.he-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    color: var(--color-texto);
+    font-size: var(--font-size_padre);
+    padding: .5em 2em;
+    gap: 8px;
+    z-index: 10;
+}
+
+.he-btnsMenu{
+    display: none;
+}
+.he-logo{
+    object-fit: contain;
+    text-decoration: none;
+    width:200px;
+}
+
+.he-menu{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.he-menu a{
+    text-decoration: none;
+    color: var(--color-dos);
+    text-transform: capitalize;
+}
+.he-menu a:hover{
+    color: var(--color-tres);
+}
+
+.he-infoContac{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+}
+/* ajustes del menu para celular */
+.he-menu_phone{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--color-uno);
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    padding: 2em;
+    transform: translateY(-150%);
+    transition: transform 1s ease;
+    font-size: 1.5em;
+}
+
+.he-menu_phone a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--color-dos);
+    padding: .3em;
+}
+.he-menu_phone a:hover{
+    color: var(--color-tres);
+
+}
+.mostrarMenu{
+    transform: translateY(0) !important;
+    transition: transform .6s ease-in-out;
+    overflow: hidden;
+}
+
+.boton-header{
+    cursor: pointer;
+    font-size:30px;
+    color: var(--color-tres);
+}
+.close{
+    display: none;
+}
+
+@media screen and (max-width: 820px) {
+    .he-container{
+        display: flex;
+        flex-direction: row-reverse;   
+        justify-content: space-between;
+        align-items: center;
+        padding:.8em 2em;
+    }
+    .he-menu{
+        display: none;
+    }
+    .he-infoContac{
+        display: none;
+    }
+    .he-menu_phone{
+        display: flex;
+    }
+
+    .he-btnsMenu{
+        display:block;
+    }
+}
+
+/* ajustes para la parte prinsipal de la pagina */
+
+main{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 10px;
+    background-color: var(--color-uno);
+}
+
+/* Ajustes generales para los botones flotantes */
+.ma-containerBtnFlo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+}
+
+/* Estilos para el ícono de WhatsApp */
+.botonFwhatsapp {
+    width: 50px;
+    height: 50px;
+    line-height: 50px; /* Centra verticalmente el ícono */
+    background-color: var(--color-tres); /* Color de fondo del botón */
+    color: #fff; /* Color del ícono */
+    border-radius: 50%; /* Hace que el botón tenga forma circular */
+    text-align: center; /* Centra horizontalmente el ícono */
+    font-size: 30px; /* Tamaño del ícono */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Agrega una transición suave al cambiar el color de fondo */
+}
+
+/* Estilos para el ícono de WhatsApp al pasar el ratón */
+.botonFwhatsapp:hover {
+    background-color: var(--color-cuatro); /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos generales para los títulos */
+h1 {
+    font-size: 3.2rem;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--color-dos);
+    margin-bottom: 20px; /* Añade un espacio inferior para separar de otros elementos */
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.7rem; /* Reduce ligeramente el tamaño del título h2 */
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--color-tres);
+    margin: 20px 0; /* Añade un espacio superior e inferior para separar de otros elementos */
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--color-dos);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); /* Ajusta la opacidad del fondo */
+    padding: 10px 0; /* Añade un espacio de relleno superior e inferior */
+    margin: 20px 0; /* Añade un espacio superior e inferior para separar de otros elementos */
+    font-weight: 400;
+}
+
+/* Estilos para el cover */
+.cover {
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    gap: 20px;
+    width: 100%;
+    font-size: 16px;
+    padding:0 2.5em;
+    overflow: hidden;
+}
+
+.cover-content {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    gap: 20px;
+}
+@media (min-width:700px) {
+    .cover-content{
+        margin-top: 100px;
+    }
+}
+
+.cover-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.cover-media {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cover-image, .cover-video {
+    width: 100%;
+    height: 100%;
+    max-height:800px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cover-video{
+    display: none;
+}
+.aparecerVideo {
+    opacity: 1; /* Mostrar el video al aplicar la clase aparecerVideo */
+}
+
+.cover-button {
+    padding: 1em 2em;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: var(--color-tres);
+    color: var(--color-dos);
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2em;
+}
+.cover-buttons a{
+    width: 100%;
+    max-width: 200px;
+
+}
+
+.cover-button:hover {
+    background-color: var(--color-cuatro);
+}
+
+@media screen and (max-width: 730px) {
+    .cover {
+        flex-direction: column;
+        padding: 2em;
+        align-items: center;
+    }
+    .cover-media {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .cover-image, .cover-video {
+        max-height:600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cover {
+        padding: .7em;
+    }
+}
+
+/* Estilos para el contenedor principal de la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Hacemos que las columnas sean adaptativas */
+    gap: 10px;
+    padding: 1em;
+}
+
+/* Estilos para las imágenes */
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Agregamos una transición suave al hacer hover */
+}
+
+/* Efecto de zoom al hacer hover */
+.gallery-item:hover .gallery-image {
+    transform: scale(1.07);
+}
+
+/* Estilos adicionales para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajustamos el tamaño de las columnas para dispositivos móviles */
+    }
+    .gI5{
+        grid-row: span 2;
+    }
+}
+
+
+.ma-carta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.car-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2em;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.car-header_categoria {
+    text-transform: capitalize;
+    padding: .3em;
+    cursor: pointer;
+    color: var(--color-dos);
+}
+
+.headerSelec {
+    border-bottom: 2px solid var(--color-tres);
+}
+
+.car-container {
+    width: 100%;
+}
+
+.car-container_categoria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.car-articulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 1em;
+    background-color: var(--color-cuatro);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.art-header_contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    font-size: 1.2em;
+    color: var(--color-dos);
+    font-weight: 400;
+}
+
+.art-titulo {
+    text-transform: capitalize;
+}
+
+.art-detalles_contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    gap: 8px;
+}
+
+.art-descripcion {
+    text-align: justify;
+    padding: 0 1.9em;
+    font-size: 1.26em;
+    color: var(--color-transparent);
+}
+
+.art-img {
+    width: 12em;
+    height: 12em;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 500px) {
+    .car-articulo {
+        padding: 1.em;
+    }
+
+    .art-header_contenedor {
+        font-size: 1em;
+    }
+
+    .art-detalles_contenedor {
+        flex-direction: row;
+    }
+
+    .art-descripcion {
+        padding: 1em;
+        font-size: 1.1em;
+    }
+
+    .art-img {
+        width: 10em;
+        height: 10em;
+    }
+}
+
+@media (max-width: 400px) {
+    .art-descripcion {
+        padding: .2em;
+        font-size: 1em;
+    }
+}
+
+.conNone {
+    display: none;
+}
+
+
+/* Estilos para la sección de testimonios */
+.ma-testimonios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.testimonio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+    padding: 1em;
+}
+
+.testimonio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-uno);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+}
+
+.testimonio p {
+    font-size: 1.1em;
+    color: #999;
+    text-align: center;
+}
+
+
+/* Estilos para la sección de sedes */
+.ma-sedes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    font-size: 16px;
+}
+
+.sedes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto, minmax(350px, 1fr));
+    align-items: center;
+    justify-items: center;
+    padding: 1em 4em;
+    gap: 15px;
+}
+
+/* Estilos para el slider */
+.swiper {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--color-dos); /* Color del icono */
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--color-dos); /* Color del índice activo */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--color-dos); /* Color del índice inactivo */
+}
+
+.sede-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 6em 4em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Utilizamos 'cover' para ajustar el tamaño del fondo */
+    width: 100%;
+    background-blend-mode: darken;
+    height: 100%;
+}
+
+/* Contenedores personalizados para cada sede */
+.sede1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.500)), url("img/sedeBello.jpeg");
+}
+
+.sede2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.500)), url("img/sedeMede.jpeg");
+}
+
+.sede3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.500)), url("img/sedeCampo.jpeg");
+}
+
+/* Botones de las sedes */
+.boton-sedes {
+    padding: 12px 25px;
+    font-size: 1em;
+    width: 100%; /* Hacemos que los botones ocupen todo el ancho disponible */
+    max-width: 250px; /* Limitamos el ancho máximo de los botones */
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: var(--color-tres);
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer; /* Agregamos cursor pointer para indicar que son clickeables */
+    transition: background-color 0.3s ease; /* Agregamos una transición suave para el cambio de color de fondo */
+}
+
+.boton-sedes:hover {
+    background-color: var(--color-cuatro);
+}
+
+/* ajustes para el contenedor de redes de las sedes */
+/* Estilos para la sección de contacto */
+.sedes-redes_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.info-redes {
+    display: flex;
+    align-items: center;
+    color: var(--color-dos); /* Color de texto */
+}
+
+.info-redes i {
+    margin-right: 5px;
+}
+
+.boton-reservar {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: var(--color-tres); /* Color de fondo del botón */
+    color: var(--color-dos); /* Color de texto del botón */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-reservar:hover {
+    background-color: var(--color-cuatro); /* Cambio de color de fondo al pasar el ratón */
+}
+.he-infoContacSedes {
+    background: linear-gradient(rgba(0, 0, 0, 0.300), rgba(0, 0, 0, 0.500));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.sedeI span{
+    font-size: 16px !important;
+}
+
+/* Media queries */
+@media (max-width: 700px) {
+    .sedes-container {
+        padding: 1em 2em;
+    }
+}
+
+/* Estilos para la sección de horario */
+.ma-horarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.497), rgba(0, 0, 0, 0.900)), url("img/fotoEdi.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 100%;
+    min-height: 400px;
+    padding: 16px;
+}
+
+.ho-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ho-container li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 1.3em;
+}
+
+.ho-container span {
+    color: var(--color-dos);
+    background-color: var(--color-cuatro);
+    padding: 0.1em 0.5em;
+    border-radius: 5px;
+}
+
+.he-infoContacPhone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--color-dos);
+}
+
+.he-infoContacPhone span {
+    font-weight: bold;
+}
+
+.he-infoContacPhone i {
+    font-size: 1.2em;
+}
+/* Estilos para el pie de página */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 16px;
+    background-color: var(--color-uno);
+    padding: 25px; /* Ajusta el relleno para mejorar la estética */
+    gap: 20px;
+}
+
+.fo-img {
+    width: 100%;
+    max-width: 150px; /* Limita el ancho máximo de la imagen */
+}
+
+.fo-info_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.fo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7em;
+    width: 100%;
+}
+
+.fc2 {
+    gap: 10px;
+    font-size: 1.3em !important;
+}
+
+.fo-direc_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.fo-titulo {
+    font-weight: 500;
+    font-size: 1.9em;
+}
+
+.fo-boton {
+    padding: 12px 25px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: var(--color-tres);
+    color: #fff;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fo-boton:hover {
+    background-color: var(--color-cuatro);
+}
+
+.fc3 {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.icon {
+    font-size: 24px;
+    color: var(--color-dos);
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: var(--color-cuatro);
+}
+
+#derechos {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .fo-img {
+        width: 30%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .fo-titulo {
+        font-size: 1.5em;
+    }
+
+    .fo-info_contact .fo-container {
+        font-size: 1.3em;
+    }
+
+    .fc2 {
+        font-size: 1em !important;
+    }
+}
